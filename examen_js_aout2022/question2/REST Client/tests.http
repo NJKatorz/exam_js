@@ -1,0 +1,56 @@
+GET http://localhost:3000/places
+
+### Read all places
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/places
+
+### Read one place
+GET {{baseUrl}}/places/1818ab3c-7662-4c06-a1ff-bf78a4371035
+
+### Read one place
+GET {{baseUrl}}/users/01f028b1-1f63-43a7-afc8-f18e7ed612be
+
+### Create a place
+POST {{baseUrl}}/places
+Content-Type: application/json
+
+{
+    "name":"Munich",
+    "description":"I'm black now Spider-Man"
+}
+
+### Create a user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name":"Nathan",
+    "email":"tonmail@gmail.com"
+}
+
+### Create a user 2
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name":"Park",
+    "email":"sonmail@gmail.com"
+}
+
+### Create a user 3
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name":"Joe",
+    "email":"monmail@gmail.com"
+}
+
+### Like a place
+POST {{baseUrl}}/places/addFav
+
+Content-Type: application/json
+{
+  "userId": "01f028b1-1f63-43a7-afc8-f18e7ed612be",
+  "placeId": "1818ab3c-7662-4c06-a1ff-bf78a4371035"
+}
