@@ -1,10 +1,12 @@
 import HomePage from "../Pages/HomePage";
 import NewPage from "../Pages/NewPage";
+import JokesPage from "../Pages/JokesPage";
 
 // Configure your routes here
 const routes = {
   "/": HomePage,
   "/new": NewPage,
+  "/jokes": JokesPage
 };
 
 /**

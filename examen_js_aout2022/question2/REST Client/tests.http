@@ -48,8 +48,8 @@ Content-Type: application/json
 
 ### Like a place
 POST {{baseUrl}}/places/addFav
-
 Content-Type: application/json
+
 {
   "userId": "01f028b1-1f63-43a7-afc8-f18e7ed612be",
   "placeId": "1818ab3c-7662-4c06-a1ff-bf78a4371035"

@@ -1,4 +1,4 @@
-[
+const jokes = [
   {
     "id": 1,
     "question": "Why are modern programming languages so materialistic?",
@@ -41,3 +41,36 @@
   }
 ]
 
+
+let joke;
+
+const allJokes = () => {
+  return jokes;
+
+};
+
+const getJoke = () => {
+  if (joke === undefined)
+    return;
+  return joke;
+
+};
+
+const getJokeWithCategory = (category) => {
+  const theAllJokes = allJokes();
+  const jokesWithThisCat = theAllJokes.find((e) => e.category === category);
+  return jokesWithThisCat;
+};
+
+const setJoke = (theJoke) => {
+  joke = theJoke;
+};
+
+
+const isJoke = () => joke !== undefined;
+
+const clearJoke = () => {
+  joke = undefined;
+};
+
+export { allJokes, getJoke, setJoke, isJoke, clearJoke, getJokeWithCategory };
