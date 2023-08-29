@@ -56,10 +56,18 @@ const getJoke = () => {
 
 };
 
-const getJokeWithCategory = (category) => {
+function getJokeWithCategory(category)  {
   const theAllJokes = allJokes();
-  const jokesWithThisCat = theAllJokes.find((e) => e.category === category);
-  return jokesWithThisCat;
+  // theAllJokes.sort((e) => e.category === category);
+  let jokeSorted = [];
+  for (let i = 0; i < theAllJokes.length; i++) {
+    if(theAllJokes[i].category === category){
+      jokeSorted[i] = theAllJokes[i];
+    }
+  }
+  
+ // console.log("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"+ theAllJokes);
+  return jokeSorted;
 };
 
 const setJoke = (theJoke) => {
